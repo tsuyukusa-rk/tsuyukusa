@@ -1,0 +1,33 @@
+@charset "utf-8"; 
+  
+*{
+margin:0;
+padding:0;
+}
+body {
+font-size:13px;
+letter-spacing: 0.13em;
+font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+color: #777;
+}
+li,dd{
+list-style: none;
+}
+table{
+border-collapse:collapse;
+border-style:none;
+}
+
+h1,h2,h3,h4,h5,h6,p,table,ul,ol,dl{
+margin: 0;
+font-weight: normal;
+}
+
+img{
+border:none;
+vertical-align:bottom;
+}
+
+a{
+text-decoration: none;	
+}

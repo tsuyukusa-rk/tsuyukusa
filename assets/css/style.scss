@@ -1,0 +1,579 @@
+@charset "UTF-8";
+
+/*--  共通設置  -------------------------------*/
+$mainColor: #263260;
+$txtColor: #777;
+$borderColor: #e2dfdb;
+$borderColorDark: #a79d8f;
+
+a:link, a visited {
+  color: #442660;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/*--  コンテンツ部分  -------------------------------*/
+.wrap{
+	width: 960px;
+	margin: 0 auto;
+}
+
+/*--  ヘッダーエリア  -------------------------------*/
+h1 {
+	font-size: 11px;
+	color: $borderColorDark;
+	border-bottom: $borderColorDark 1px solid;
+	height: 18px;
+	padding: 2px 0 0;
+	p {
+		width: 960px;
+		margin: 0 auto;
+		height: 20px;
+	}
+}
+
+.head{
+	clear: both;
+	.headLeft{
+		width: 640px;
+		float: left;
+		> div{
+			clear: both;
+			overflow: hidden;
+		}
+		h2{
+			float: left;
+			width: 133px;
+			height: 52px;
+			padding: 18px 0 0;
+			img{
+				width: 114px;
+				height: 26px;
+			}
+		}
+		ul{
+			float: left;
+			position: relative;
+			overflow: hidden;
+			padding: 24px 0 0 0;
+			li{
+				padding: 0 20px;
+				float: left;
+				border-left: 1px solid $borderColor;
+				&:last-child{
+					padding: 0 20px;
+					float: left;
+					border-left: 1px solid $borderColor;
+					border-right: 1px solid $borderColor;
+				}
+				a{
+					height: 70px;
+					vertical-align: middle;
+					color:$txtColor;	
+				}
+			}
+		}
+		.mainSlider{
+			padding: 0;
+			.active{
+				z-index: 9;
+			}
+			li{
+				border: none;
+				padding: 0;
+				&:last-child{
+					padding: 0;
+					border: none;
+				}
+			}
+			.notFirstImg{
+				display: none;
+				position: absolute;
+				top: 0;
+			}
+		}
+	}
+	.headRight{
+		width: 320px;
+		float: left;
+		margin: 0 0 30px;
+	}
+}
+
+/*--  メイン上部エリア  -------------------------------*/
+.main{
+	clear: both;
+	margin: 30px 0 0;
+	height: 550px;
+	> ul{
+		clear: both;
+		li{
+			width: 285px;
+			height: 560px;
+			float: left;
+			border-right: 1px solid $borderColor;
+			padding: 0 20px;
+			overflow:hidden;
+			width: 285px;
+			&:first-child{
+				width: 285px;
+				float: left;
+				border-right: 1px solid $borderColor;
+				padding: 0 20px 0 0px;
+			}
+			&:last-child{
+				width: 305px;
+				float: left;
+				padding: 0 0px 0 20px;
+				border-right: none;
+			}
+			h3{
+				color: #fff;
+				font-size: 16px;
+				margin: 0 0 15px;
+				font-weight: bold;
+				background: #888;
+				padding: 5px 0 4px 10px;
+				border-radius: 4px;
+				text-shadow: 1px 2px 2px #888;
+				span {
+					font-size: 10px;
+					padding: 0 5px 0 0;
+				}
+			}
+		}
+		> dl{
+			font-size: 13px;
+			margin: 0 0 0 10px;
+			display: block;
+		}
+		dl{
+			font-size: 13px;
+			margin: 10px 0 0 10px;
+			dt{
+				span{
+					font-weight: bold;
+					color: #666;
+				}
+			}
+			dd{
+				margin: 5px 0 10px;
+				padding: 0 0 10px;
+				border-bottom: 1px dotted $borderColor;
+				span{
+					font-weight: bold;
+					color: #666;
+				}
+			}
+		}
+		.biography dl{
+			border-bottom: none;
+		}
+	}
+	.liveScheduleTxt,.informationTxt{
+		padding-left: 15px;
+	}
+	.biographyImg img{
+		width: 280px;
+		margin: 15px 0 0 -15px;
+		border-bottom: none;
+	}
+}
+
+.displayNone{
+	display: none;
+}
+
+/*--  メイン下部エリア  -------------------------------*/
+.contentsBottom{
+	height: 300px;
+	clear: both;
+	margin: 40px 0;
+	padding: 40px 0;
+	border-top: 1px dotted #e2dfdb;
+	h3{
+		color: #fff;
+		font-size: 16px;
+		margin: 0 0 15px;
+		font-weight: bold;
+		background: #888;
+		padding: 5px 0 4px 10px;
+		border-radius: 4px;
+		text-shadow: 1px 2px 2px #888;
+	}
+	.contentsBottomLeft{
+		height: 300px;
+		border-right: 1px solid $borderColor;
+		width: 614px;
+		padding: 0 20px 0 0;
+		float: left;
+		h4{
+			font-size: 16px;
+			span{
+				font-size: 11px;
+				padding: 0 0 0 10px;
+			}
+		}
+		.cd{
+			margin: 0px 0 15px;
+			ul{
+				li{
+					margin: 0px 0 10px;
+					.activeSong {
+						background-color: #f3f3f3;
+						/* color: #fff; */
+						border-radius: 3px;
+						/* font-weight: bold; */
+						border: solid 1px #ccc;
+					}
+				}
+			}
+		}
+	}
+	.contentsBottomRight{
+		width: 305px;
+		padding: 0 0px 0 20px;
+		float: left;
+	}
+	.feedArea{
+		// background-color: #efefef;
+		// padding: 20px;
+		li {
+			padding: 0 0 10px;
+		}
+	}
+	.feedAreaCaption{
+		font-size: 13px;
+		margin: 0 0 10px;
+	}
+}
+
+/*--  フッターエリア  -------------------------------*/
+.footer{
+	margin: 50px 0 0;
+	padding: 20px 0;
+	border-top: 1px solid $borderColor;	
+	> div{
+		width: 960px;
+		margin: 0 auto;
+		p{
+			text-align: right;
+		}
+	}
+}
+
+#show{
+	font-weight: bold;
+}
+
+.returnTop{
+	display: none;
+	cursor: pointer;
+	background-color: #777;
+	width: 60px;
+	height: 56px;
+	border-radius: 6px;
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	text-align: center;
+	padding: 4px 0 0;
+	color: #fff;
+	opacity: 0.4;
+	span{
+		font-size: 34px;
+	}
+}
+
+/*--  pageIntro  --------------------------------------------*/
+.pageIntro {
+	opacity: 1 !important;
+	position: fixed;
+	top: 0;
+	background-color: #fff;
+	z-index: 9999;
+	width:100%;
+	height:100%;
+	div {
+		text-align: center;
+		width:100%;
+		height:100%;
+		img {
+			display: none;
+			margin-top: 15px;
+			width: 140px;
+			height: 31px;
+		}
+		.goTop {
+			display: none;
+			border-top: 1px solid $borderColor;
+			border-bottom: 1px solid $borderColor;
+			padding: 10px;
+			margin: 30px 0 0;
+			cursor: pointer;
+			
+		}
+	}
+}
+
+canvas{
+	display: block;
+	margin: 0 auto;
+}
+
+/*--  カレンダーモーダル  -----------------------------------------*/
+.jsclenderModal {
+	display:none;
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	background-color:#fff;
+	z-index: 99999;
+	border-radius: 10px;
+	box-shadow: 0px 0px 15px #333;
+	.jsclenderModalClose {
+		color: #fff;
+		font-size: 14px;
+		text-align: right;
+		padding: 5px 10px 5px 0;
+		background-color: #a79d8f;
+		/* overflow: hidden; */
+		border-radius: 10px 10px 0 0;
+		cursor: pointer;
+	}
+	.scheduleApiModal{
+		padding: 10px;
+		height: 231px;
+		overflow: auto;
+		dt{
+			span{
+				font-weight: bold;
+				color: #666;
+			}
+		}
+		dd{
+			margin: 5px 0 10px;
+			padding: 0 0 10px;
+			border-bottom: 1px dotted $borderColor;
+			span{
+				font-weight: bold;
+				color: #666;
+			}
+		}
+	}
+}
+
+.jsclenderModalOverlay {
+	display:none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: #000;
+	opacity: 0.6 !important;
+	top: 0;
+	z-index: 999;
+}
+
+/*--  640px以下のcss  -----------------------------------------*/
+
+@media screen and (max-width: 640px){
+
+img{
+	width: 100%;
+}
+
+.wrap {
+	width: 100%;
+	margin: 0 auto;
+}
+
+/*--  spヘッダーエリア  -------------------------------*/
+h1 {
+	font-size: 11px;
+	color:$borderColorDark;
+	border-bottom:$borderColorDark 1px solid;
+	height: 100%;
+	padding: 3px 10px;
+	p {
+		width: 100%;
+		margin: 0 auto;
+		height: 100%;
+	}
+}
+
+.head{
+	.headLeft {
+		width: 100%;
+		float: none;
+		h2 {
+			float: none;
+			width: 133px;
+			height: 42px;
+			padding: 25px 0 0;
+			margin: 0 auto;
+		}
+		ul {
+			height: 46px;
+			padding: 0px 0 0;
+			float: none;
+			width: 300px;
+			margin: 0 auto;
+			li:first-child{
+				border-left: none;
+			}
+			li:last-child{
+				border-right: none;
+			}
+		}
+		.mainSlider {
+			padding: 0;
+			width: 100%;
+			overflow: visible;
+		}
+	}
+	.headRight{
+		display: none;
+	}
+}
+
+/*--  spメイン上部エリア  -------------------------------*/
+.main {
+	clear: both;
+	margin: 30px 0 0;
+	height: 100%;
+	padding: 0px 0 0px;
+	> ul{
+		li{
+			width: 92%;
+			height: inherit;
+			float: none;
+			border-right: none;
+			padding: 0px 4% 0px;
+			overflow: hidden;
+			border-bottom:$borderColor 1px solid;
+			&:first-child {
+				width: 92%;
+				float: none;
+				border-right: none;
+				padding: 0 4% 0px;
+			}
+			&:last-child {
+				width: 92%;
+				float: none;
+				border-right: none;
+				padding: 0px 4% 0px;
+			}
+			dl{
+				display: none;
+				margin: 0 10px 0;
+			}
+			h3{
+				background: url(../img/arrowSp.png) no-repeat 98% center;
+				background-size: 6% 17%;
+				margin: 0;
+				padding: 25px 0px 20px;
+				color: $mainColor;
+				text-shadow: inherit;
+			}
+			.open{
+				background: url(../img/arrowSpClose.png) no-repeat 98% center;
+				background-size: 6% 17%;
+				margin: 0;
+				padding: 25px 0px 20px;
+			}
+		}
+	}
+	.biographyImg img {
+		width: 100%;
+		margin: 15px 0;
+	}
+	.formLink{
+		border-top:$borderColor 1px solid;
+		padding: 20px;
+	}
+}
+
+/*--  spメイン下部エリア  -------------------------------*/
+.contentsBottom {
+	height: initial;
+	clear: both;
+	margin: 0px 0;
+	padding: 0;
+	border-top: none;
+	.contentsBottomLeft {
+		height: initial;
+		border-right: none;
+		width: 100%;
+		padding: 0;
+		float: none;
+		margin: 0 0 30px;
+		h3 {
+			border-radius: inherit;
+			color: #fff;
+			font-size: 16px;
+			margin: 0 0% 10px;
+			font-weight: bold;
+			padding: 10px 10px;
+		}
+		h4 {
+			font-size: 16px;
+			margin: 0 4%;
+		}
+	}
+	.contentsBottomRight {
+		width: 100%;
+		padding: 0 0%;
+		float: none;
+		h3 {
+			border-radius: inherit;
+			padding: 10px;
+		}
+		.feedAreaCaption {
+			padding: 0 4%;
+		}
+		.feedArea {
+			padding: 0 4%;
+		}
+	}
+}
+
+/*--  spフッターエリア  -------------------------------*/
+.footer{
+		margin: 40px 0 0;
+	> div {
+		width: 100%;
+		margin: 0 auto;
+		p {
+			text-align: center;
+		}
+	}
+}
+
+/*--  トップへ戻る  -------------------------------*/
+.returnTop{
+	display: none;
+	cursor: pointer;
+	background-color: #777;
+	width: 50px;
+	height: 50px;
+	border-radius: 6px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	text-align: center;
+	padding: 0px 0 0;
+	color: #fff;
+	opacity: 0.4;
+	span{
+		font-size: 34px;
+		/* height: 20px; */
+		display: block;
+		overflow: hidden;
+		position: absolute;
+		top: 8px;
+		left: 8px;
+	}
+}
+
+}

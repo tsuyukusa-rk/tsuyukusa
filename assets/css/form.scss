@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+@media screen and (max-width: 640px) {
+
+body{
+	width:100%;
+}
+
+input[type=submit]{
+	height: 40px;
+	width: 100%;
+	margin: 20px auto 0;
+	text-align:center;
+}
+
+}
+
+table{
+	border: none;
+}
+
+tr{
+	margin: 10px 0;
+	border-bottom: 1px dotted #ccc;
+}
+th{
+	margin: 10px 0;
+	vertical-align: middle;
+	width: 35%;
+	text-align: left;
+}
+td{
+	padding: 10px 0;
+	width: 65%;
+}
+input[type=text]{
+	height: 30px;
+	width: 95%;
+}
+select{
+	height: 30px;
+	width: 95%;
+}
+input[type=submit]{
+	height: 40px;
+	width: 100%;
+	margin: 20px auto 0;
+	text-align:center;
+}
+.thanks{
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color: #777;
+	margin: 40px 0 40px;
+}

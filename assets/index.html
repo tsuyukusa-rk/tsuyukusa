@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<link href="http://tsuyu9sa.com/" rel="canonical">
+<link href="http://tsuyu9sa.com/" rel="index">
+
+<title>『ツユクサ』オフィシャルサイト</title>
+<meta name="author" content="ツユクサ">
+<meta name="code" scheme="081">
+<meta name="description" content="東京都・神奈川県で音楽活動を行なうアーティスト『ツユクサ』のオフィシャルサイト">
+<meta name="keywords" content="東京都,神奈川県,弾き語り,ツユクサ,アーティスト,音楽">
+<meta name="viewport" content="width=device-width">
+<link rel="shortcut icon" href="/img/favicon4.ico" />
+
+<!--  css  -->
+<link href="/css/reset.css" media="screen" rel="stylesheet" type="text/css">
+<link href="/css/style.css" media="screen" rel="stylesheet" type="text/css">
+<link href="/css/jquery.remodal.css" media="screen" rel="stylesheet" type="text/css">
+<link href="/jplayer/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css">
+
+<!--  js  -->
+<script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/jplayer/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="/jplayer/jplayer.playlist.min.js"></script>
+</head>
+
+<body>
+<h1>
+  <p>東京都・神奈川県で音楽活動を行なうアーティスト『ツユクサ』のオフィシャルサイト</p>
+</h1>
+<div class="wrap">
+
+<!--  ヘッダー  -->
+  <div class="head">
+    <div class="headLeft">
+      <div>
+        <h2><img src="img/logoHeader.png" alt="ツユクサ"></h2>
+        <ul>
+          <li><a href="./blog/index.php" target="_blank">Blog</a></li>
+          <li><a href="https://myspace.com/tsuyukusa" target="_blank">Myspace</a></li>
+          <li><a href="https://www.facebook.com/tsuyukusa.music" target="_blank">Facebook</a></li>
+        </ul>
+      </div>
+      <ul class="mainSlider">
+        <li class="active"><img src="img/topMain4.jpg" alt=""></li>
+        <li class="notFirstImg"><img src="img/topMain.jpg" alt=""></li>
+      </ul>
+    </div>
+    <div class="headRight"> <img src="img/topMainRight.jpg" alt=""> </div>
+  </div>
+  
+<!--  コンテンツ上部  -->
+  <div class="main">
+    <ul class="accordion">
+      <li class="biography">
+        <h3>Biography</h3>
+        <dl>
+          <dt> 「侘び・寂び」などの世界観をテーマとした楽曲制作、弾き語りによるライブ活動を行なうアーティスト。<br>
+            主に、渋谷を拠点にしている。音源は、打ち込みを交えたものを自主制作。<br>
+          </dt>
+          <dd> <span>音源の試聴</span><br>
+            &#9657;<a href="https://myspace.com/tsuyukusa" target="_blank">myspace</a><br>
+          </dd>
+          <dd> <span>その他SNS</span><br>
+            &#9657;<a href="https://www.facebook.com/tsuyukusa.music" target="_blank">facebook</a><br>
+            &#9657;<a href="./blog/index.php" target="_blank">Blog</a><br>
+          </dd>
+          <dd class="biographyImg"> <img src="img/biography.jpg" alt=""> </dd>
+        </dl>
+      </li>
+      <li class="information">
+        <h3>Various information</h3>
+        <dl>
+          <dt>コンテンツ追加（2015/05/11）</dt>
+          <dd class="informationTxt">Songsに『ムービースター』を追加</dd>
+          <dt>コンテンツ追加（2015/04/18）</dt>
+          <dd class="informationTxt">過去のスケジュール一覧追加</dd>
+          <dt>コンテンツ追加（2014/12/20）</dt>
+          <dd class="informationTxt">プレイヤー、ブログRSS等追加</dd>
+          <dt>本サイト開設（2014/12/01）</dt>
+          <dd class="informationTxt"> </dd>
+        </dl>
+      </li>
+      <li class="liveSchedule">
+      <h3>Live schedule</h3>
+        <dl class="scheduleApi">
+          <dt><a class="jsShowModal" href="">過去のスケジュール一覧を見る</a></dt>
+          <dd></dd>
+        </dl>
+        <p class="formLink"> チケットをご希望の方は<a href="#show" id="show">メールフォーム</a>にて、ご予約ください。 </p>
+      </li>
+    </ul>
+  </div>
+  
+<!--  コンテンツ下部  -->
+  <div class="contentsBottom">
+    <div class="contentsBottomLeft">
+      <h3>Songs</h3>
+      <div class="cd">
+        <ul>
+          <li class="firstPlayer"><h4><a href="#" data-src="/jplayer/audio/mp3/ムービースター.mp3">『ムービースター』</a><span>written by Ryoji Kondo</span></h4></li>
+          <li class="last"><h4><a href="#" data-src="/jplayer/audio/mp3/雨音.mp3">『雨音』</a><span>written by Ryoji Kondo 　再生回数</span><span class="counter"></span><span>回</span></h4></li>
+        </ul>
+      </div>
+      <div id="audio_player" class="jp-jplayer"></div>
+      <div id="jp_container_1" class="jp-audio">
+        <div class="jp-type-single">
+          <div class="jp-gui jp-interface">
+            <ul class="jp-controls">
+              <li><a href="#" class="jp-play" tabindex="1">play</a></li>
+              <li><a href="#" class="jp-pause" tabindex="1">pause</a></li>
+              <li><a href="#" class="jp-stop" tabindex="1">stop</a></li>
+              <li><a href="#" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+              <li><a href="#" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+              <li><a href="#" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+            </ul>
+            <div class="jp-progress">
+              <div class="jp-seek-bar">
+                <div class="jp-play-bar"></div>
+              </div>
+            </div>
+            <div class="jp-volume-bar">
+              <div class="jp-volume-bar-value"></div>
+            </div>
+            <div class="jp-time-holder">
+              <div class="jp-current-time"></div>
+              <div class="jp-duration"></div>
+              <ul class="jp-toggles">
+                <li><a href="#" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+                <li><a href="#" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="jp-title">
+            <ul>
+              <li></li>
+            </ul>
+          </div>
+          <div class="jp-no-solution"> <span>Update Required</span> To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>. </div>
+        </div>
+      </div>
+    </div>
+    <div class="contentsBottomRight">
+      <h3>Blog</h3>
+      <p class="feedAreaCaption">↓最近更新された記事</p>
+      <div class="feedArea">
+        <div id="feed"> </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--  フッター  -->
+<div class="footer">
+  <div>
+    <p>Copyright&copy; Tsuyukusa All Right Reserved</p>
+  </div>
+</div>
+
+<!-- イントロ -->
+<div class="pageIntro">
+  <div>
+    <canvas id="introCanvas" width="150px" height="50px"></canvas>
+    <img src="img/logoHeader.png" alt="ツユクサ">
+    <p class="goTop"><span>TOPへ</span></p>
+  </div>
+</div>
+
+<!--  モーダル  -->
+<div class="remodal" data-remodal-id="show">
+  <div>
+    <iframe id="twitter-widget-0" scrolling="yes" frameborder="0" allowtransparency="true" src="contact/index.php"></iframe>
+  </div>
+  <br>
+  <br>
+  <a href="#" class="remodal-close"></a>
+</div>
+
+<!-- モーダルカレンダー -->
+<div class="jsclenderModalOverlay"></div>
+<div class="jsclenderModal">
+  <p class="jsclenderModalClose">閉じる</p>
+  <dl class="scheduleApiModal">
+  </dl>
+</div>
+
+<!--  トップへ戻る  -->
+<p class="returnTop">
+  <span>&#8743;</span>
+</p>
+
+<!--     Google Analytics     -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-51764917-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<!--     フィード読み込み処理     -->
+<script type="text/javascript">
+google.load("feeds", "1");
+function initialize() {
+     //読み込み最大記事数
+     var max_length = 5; 
+      //RSSを指定
+      var feed = new google.feeds.Feed("http://tsuyu9sa.com/blog/feed"); 
+      feed.setNumEntries(max_length);
+      feed.load(function(result) {
+        if (!result.error) {
+          var container = document.getElementById("feed");
+          for (var i = 0; i < result.feed.entries.length  ; i++) {
+            var entry = result.feed.entries[i];
+            var title = entry.title;　//記事タイトル
+            var link = entry.link; //記事へのリンク
+
+            var content = entry.content; //記事の内容
+            var snippet = entry.contentSnippet; //記事の要約
+	    	var publishedDate = entry.publishedDate; //投稿日
+            var category = entry.categories[0]; //カテゴリー
+
+           //タイトルを挿入
+           $('#feed').append("<li><a href='" + link  +"'>"+ title +"</a></li>");
+		   $('#feed a').attr({target:"_blank"}); 
+          }
+        }
+      });
+}
+google.setOnLoadCallback(initialize);
+</script>
+
+</body>
+</html>

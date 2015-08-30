@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>お問い合わせ内容の確認</title>
+        <link href="../css/form.css" rel="stylesheet" type="text/css">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h3>お問い合わせ内容を確認して下さい。</h3>
+        <form name="contact_form" action="" method="post">
+            <table border="0" cellspacing="0" cellpadding="10">
+                <tr>
+                    <th>お名前</th>
+                    <td id="name"></td>
+                </tr>
+                <tr>
+                    <th>フリガナ</th>
+                    <td id="name_kana"></td>
+                </tr>
+                <tr>
+                    <th>E-mail アドレス</th>
+                    <td id="email"></td>
+                </tr>
+                <tr>
+                    <th>公演日</th>
+                    <td id="live"></td>
+                </tr>
+                <tr>
+                    <th>チケット枚数</th>
+                    <td id="ticket"></td>
+                </tr>
+            </table>
+            <input name="_back" type="submit" value="戻る">
+            <input name="commit" type="submit" value="送信する">
+        </form>
+    </body>
+</html>

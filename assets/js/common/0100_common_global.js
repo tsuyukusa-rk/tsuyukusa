@@ -4,12 +4,13 @@
 	var APP = {
 		global: {},
 		api: {},
+		intro: {},
 		ui: {}
 	};
 
-	var TS = APP;
-
 	// グローバル変数
-	TS.global = {};
+	APP.global = {};
+
+	TS = APP;
 
 }());

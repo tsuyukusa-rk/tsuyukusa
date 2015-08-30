@@ -161,4 +161,6 @@ module.exports = function(grunt){
   //タスクの登録
   grunt.registerTask('server', ['concat', 'compass', 'copy', 'connect', 'open', 'watch']);
 
+  grunt.registerTask('dist', ['concat', 'compass', 'copy']);
+
 }

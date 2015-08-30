@@ -1,6 +1,4 @@
-$(function(){
-
-// ##### 処理 ###########################################
+(function(APP){
 
 	/**
 	 **	設定
@@ -8,13 +6,13 @@ $(function(){
 	var setting = {
 		url: '/js/data/schedule.json',
 		data: ''
-	},
+	};
 
 	/**
 	 **	スケジュールの埋め込み処理
 	 ** @param setteng
 	 */
-	apiCall = function(setting){
+	APP.api.apiCall = function() {
 
 		$.ajax({
 			url: setting.url, //urlをセット
@@ -22,7 +20,7 @@ $(function(){
 
 		}).done(function(data){
 			// JSONが取得できたら、HTMLを組て立る 
-			doBuild(data);
+			APP.api.doBuild(data);
 
 		}).fail(function(data){
 			// JSONが取得できなければ、アラート 
@@ -36,7 +34,7 @@ $(function(){
 	 **	スケジュールの埋め込み処理
 	 ** @param json
 	 */
-	doBuild = function(json){
+	APP.api.doBuild = function(json){
 
 		var scheduleArray = []; // トップページ表示用のHTML格納場所
 		var scheduleArrayModal = []; // モーダル表示用のHTML格納場所
@@ -59,10 +57,4 @@ $(function(){
 		$('.scheduleApiModal').append(scheduleArrayModal);
 	};
 
-
-// #### 起動 ##################################################
-
-	// APIを呼び出す
-	apiCall(setting);
-
-});
+}(TS));

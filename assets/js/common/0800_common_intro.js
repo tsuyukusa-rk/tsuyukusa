@@ -1,4 +1,4 @@
-$(function(){
+;(function(APP){
 
 	// ie8以下でindexofを使えるようにする
 	if (!Array.indexOf) {
@@ -14,8 +14,8 @@ $(function(){
 
 // ##### 変数 ################################################
 
-	var $pege = $('.pageIntro');
-	var $canvas = $('#introCanvas')[0];
+	var $pege;
+	var $canvas;
 
 // ##### 処理 ################################################
 
@@ -23,7 +23,10 @@ $(function(){
 	** 初期処理
 	** @parma 
 	*/
-	var init = function(){
+	APP.intro.init = function() {
+
+		$pege = $('.pageIntro');
+		$canvas = $('#introCanvas')[0];
 
 		// ウィンドウの高さを取得し、イントロページに設定
 		var winHeight = $(window).height();
@@ -70,7 +73,7 @@ $(function(){
 	** キャンバスのアニメーション設定
 	** @parma 
 	*/
-	loop = function() {
+	APP.intro.loop = function() {
 
 		var canSet = canvasSetting;
 		canSet.x += 1;
@@ -89,17 +92,17 @@ $(function(){
 		}
 
 		// 図形描画
-		canvasDraw(canSet.x, canSet.y, canSet.lineX, canSet.lineY, canSet.lineXX, canSet.lineYY);
+		APP.intro.canvasDraw(canSet.x, canSet.y, canSet.lineX, canSet.lineY, canSet.lineXX, canSet.lineYY);
 
 		// ループのタイマーを設定
-		var timer = setTimeout(loop, 20);
+		var timer = setTimeout(APP.intro.loop, 20);
 	},
 
 	/*
 	** 図形描画設定処理
 	** @parma loopX, loopY
 	*/
-	canvasDraw = function(loopX, loopY, lineX, lineY, lineXX, lineYY) {
+	APP.intro.canvasDraw = function(loopX, loopY, lineX, lineY, lineXX, lineYY) {
 
 		if($canvas.getContext) {
 		// キャンバスタグが存在している場合
@@ -167,12 +170,4 @@ $(function(){
 		}
 	}
 
-// #### 起動 ##################################################
-
-	// 初期処理起動
-	init();
-
-	// 図形描画開始
-	loop();
-
-});
+}(TS));

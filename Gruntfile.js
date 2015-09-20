@@ -4,7 +4,7 @@ module.exports = function(grunt){
   // 省略できる
   require('load-grunt-tasks')(grunt, {
     config: 'package.json',
-    scope: 'devDependencies'
+    scope: ['devDependencies', 'dependencies']
   });
 
   // タスク実行にかかった時間をコマンドに表示
@@ -136,14 +136,14 @@ module.exports = function(grunt){
       // scss
       sass: {
         cwd: pass.assets,
-        files: '**/*.scss',
+        files: 'css/**/*.scss',
         tasks: ['compass'],
         dest: pass.dist
       },
       // Java Script
       js: {
         cwd: pass.assets,
-        files: '**/*.js',
+        files: 'js/**/*.js',
         tasks: ['concat'],
         dest: pass.dist
       }
@@ -154,13 +154,58 @@ module.exports = function(grunt){
       server: {
         path: 'http://localhost:<%= connect.livereload.options.port %>'
       }
+    },
+
+    // grunt-shellの設定
+    shell: {
+      // ローカルでのmongodb立ち上げ
+      mongod: {
+        command: [
+          'cd MongoDB/Server/3.0/bin',
+          'mongod --dbpath C:/Users/ryo/Desktop/site_root/github/tsuyukusa/MongoDB/data'
+        ].join('&')
+      },
+      // mongoシェル起動
+      mongo: {
+        command: [
+          'cd C:/Users/ryo/Desktop/site_root/github/tsuyukusa/MongoDB/Server/3.0/bin',
+          'mongo'
+        ].join('&')
+      },
+      // シェルを立ちあげる
+      shells: {
+        command: [
+          'start',
+          'start',
+          'grunt clean server'
+        ].join('&')
+      }
+    },
+
+    "babel": {
+      options: {
+        // ソースマップが要らない場合は false にする
+        sourceMap: false
+      },
+      dist: {
+        files: {
+          'dist/js/common.js': 'dist/js/common.js'
+        }
+      }
     }
 
   });
 
   //タスクの登録
-  grunt.registerTask('server', ['concat', 'compass', 'copy', 'connect', 'open', 'watch']);
-
+  // シェルを数の分だけ立ち上げる
+  grunt.registerTask('shells', ['shell:shells']);
+  // mongodbを起動する
+  grunt.registerTask('mongod', ['shell:mongod']);
+  // mongoシェルの起動
+  grunt.registerTask('mongo', ['shell:mongo']);
+  // ローカルにてモック立ち上げ
+  grunt.registerTask('server', ['concat', 'compass',  'copy', 'connect', 'open', 'watch']);
+  // アップ用ファイル生成
   grunt.registerTask('dist', ['concat', 'compass', 'copy']);
 
 }

@@ -4,6 +4,7 @@
 dist/
 .sass-cache/
 node_modules/
+MongoDB/
  
 # 下階層全てのフォルダ内で ".DS_Store" ファイルを無視したい
 # */.DS_Store

@@ -4,6 +4,10 @@
 	var APP = {
 		global: {},
 		api: {},
+		blog: {
+			view: {},
+			model: {}
+		},
 		intro: {},
 		ui: {}
 	};

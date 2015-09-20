@@ -1,4 +1,4 @@
-(function(APP){
+;(function(APP){
 
 	/**
 	 **	設定

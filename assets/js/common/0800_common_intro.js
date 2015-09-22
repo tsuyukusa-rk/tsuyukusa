@@ -21,7 +21,7 @@
 
 	/*
 	** 初期処理
-	** @parma 
+	** @parma
 	*/
 	APP.intro.init = function() {
 
@@ -58,7 +58,7 @@
 
 	/*
 	** キャンバスの設定
-	** @parma 
+	** @parma
 	*/
 	canvasSetting = {
 		x: 10,
@@ -71,7 +71,7 @@
 
 	/*
 	** キャンバスのアニメーション設定
-	** @parma 
+	** @parma
 	*/
 	APP.intro.loop = function() {
 

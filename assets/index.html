@@ -50,7 +50,7 @@
     </div>
     <div class="headRight"> <img src="img/topMainRight.jpg" alt=""> </div>
   </div>
-  
+
 <!--  コンテンツ上部  -->
   <div class="main">
     <ul class="accordion">
@@ -93,7 +93,7 @@
       </li>
     </ul>
   </div>
-  
+
 <!--  コンテンツ下部  -->
   <div class="contentsBottom">
     <div class="contentsBottomLeft">
@@ -206,9 +206,9 @@
 google.load("feeds", "1");
 function initialize() {
      //読み込み最大記事数
-     var max_length = 5; 
+     var max_length = 5;
       //RSSを指定
-      var feed = new google.feeds.Feed("http://tsuyu9sa.com/blog/feed"); 
+      var feed = new google.feeds.Feed("http://tsuyu9sa.com/blog/feed");
       feed.setNumEntries(max_length);
       feed.load(function(result) {
         if (!result.error) {
@@ -225,7 +225,7 @@ function initialize() {
 
            //タイトルを挿入
            $('#feed').append("<li><a href='" + link  +"'>"+ title +"</a></li>");
-		   $('#feed a').attr({target:"_blank"}); 
+		   $('#feed a').attr({target:"_blank"});
           }
         }
       });

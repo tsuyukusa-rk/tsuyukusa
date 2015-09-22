@@ -109,6 +109,7 @@ module.exports = function(grunt){
     // Live Reload
     connect: {
       options: {
+        livereload: true,
         hostname : 'localhost',
         base: pass.dist
       },
@@ -119,33 +120,26 @@ module.exports = function(grunt){
       }
     },
 
-    // Watch
-    watch: {
+    // esteWatchのほうが早いらしい
+    esteWatch: {
       // options
       options: {
-        livereload: true,
-        spawn: false
+        dirs: ['./assets/**'],
+        livereload: {
+          enabled: true,
+          // 監視対象ファイル
+          extensions: ['js','scss','html'],
+          port: 35729
+        }
       },
-      // html
-      html: {
-        cwd: pass.assets,
-        files: '**/*.html',
-        tasks: [],
-        dest: pass.dist
+      'html': function(filepath) {
+        return ['copy:html']
       },
-      // scss
-      sass: {
-        cwd: pass.assets,
-        files: 'css/**/*.scss',
-        tasks: ['compass'],
-        dest: pass.dist
+      'scss': function(filepath) {
+        return ['compass']
       },
-      // Java Script
-      js: {
-        cwd: pass.assets,
-        files: 'js/**/*.js',
-        tasks: ['concat'],
-        dest: pass.dist
+      'js': function(filepath) {
+        return ['concat']
       }
     },
 
@@ -204,7 +198,7 @@ module.exports = function(grunt){
   // mongoシェルの起動
   grunt.registerTask('mongo', ['shell:mongo']);
   // ローカルにてモック立ち上げ
-  grunt.registerTask('server', ['concat', 'compass',  'copy', 'connect', 'open', 'watch']);
+  grunt.registerTask('server', ['concat', 'compass',  'copy', 'connect', 'open', 'esteWatch']);
   // アップ用ファイル生成
   grunt.registerTask('dist', ['concat', 'compass', 'copy']);
 

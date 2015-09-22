@@ -21,7 +21,8 @@
     "grunt-contrib-clean": "~0.6.0",
     "grunt-contrib-copy": "~0.8.0",
     "grunt-php": "~1.5.1",
-    "grunt-babel": "~5.0.2"
+    "grunt-babel": "~5.0.2",
+    "grunt-este-watch": "~0.1.18"
   },
   "dependencies": {
     "grunt-shell": "~1.1.2",

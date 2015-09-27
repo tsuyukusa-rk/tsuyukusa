@@ -46,27 +46,19 @@
 
         <!-- ブログコンテンツ -->
         <section class="blogContentsArea">
-            <!-- サイドメニューエリア -->
-            <ul class="blogSideArea">
-                <li class="recentArticleArea">
-                    <dl>
-                        <dt>Recent article</dt>
-                    </dl>
-                </li>
-                <li>
-                    <dl>
-                        <dt>Category</dt>
-                        <dd><a class="category_live" href="#">・ライブについて</a></dd>
-                        <dd><a class="category_songs" href="#">・曲作り・宅録</a></dd>
-                        <dd><a class="category_bookReviews" href="#">・最近読んだ本</a></dd>
-                        <dd><a class="category_eventsOfOneDay" href="#">・ある日の出来事</a></dd>
-                    </dl>
-                </li>
-            </ul>
-            <!-- //サイドメニューエリア -->
-            <!-- ブログメインエリア -->
-            <ul class="blogMainContentsArea"></ul>
-            <!-- //ブログメインエリア -->
+            <form id="blogAdmin">
+                <label for="uploadDate">日付</label><input type="text" name="uploadDate" id="uploadDate">
+                <label for="category"></label>
+                <select id="category">
+                    <option name="live">ライブ</option>
+                    <option name="songs">曲作り・宅録</option>
+                    <option name="bookReviews">書評</option>
+                    <option name="eventsOfOneDay">ある日の出来事</option>
+                </select>
+                <label for="title">タイトル</label><input type="text" name="title" id="title">
+                <label for="textArea">テキスト</label><textarea name="textArea" id="textArea" cols="120" rows="30" placeholder="ブログ文章の記述"></textarea>
+                <label for="imgUpload">アップロード</label><input type="file" id="imgUpload" name="imgUpload">
+            </form>
         </section>
 
     </div>
